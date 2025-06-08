@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog - My Fashion Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <h1>My Fashion Blog</h1>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    <nav id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<main>
+    <section class="starting">
+        <h2>Latest Fashion Articles</h2>
+        <p>Explore seasonal trends, tips, and styling guides curated for fashion lovers.</p>
+    </section>
+
+    <section class="featured-posts">
+        <div class="post fade-in">
+            <img src="summer.jpg" alt="Trendy Look">
+            <h3>5 Fashion Essentials for Summer 2025</h3>
+            <p>Upgrade your wardrobe with breathable fabrics, pastel tones, and comfy cuts.</p>
+            <a href="post1.html" class="read-more-button">Read More</a>
+        </div>
+
+        <div class="post fade-in">
+            <img src="denim2.jpg" alt="Denim Style">
+            <h3>How to Rock Denim in All Seasons</h3>
+            <p>Denim jackets, jeans, skirts - we show you how to style them all year long.</p>
+            <a href="post2.html" class="read-more-button">Read More</a>
+        </div>
+
+        <div class="post fade-in">
+            <img src="acessories.jpg" alt="Shoes and Accessories">
+            <h3>Chic Accessories to Elevate Any Outfit</h3>
+            <p>From statement earrings to minimalist handbags, these picks are must-haves.</p>
+            <a href="post3.html" class="read-more-button">Read More</a>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p> 2025 My Fashion Blog | All Rights Reserved</p>
+</footer>
+<script>
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('nav-links')
+
+menuToggle.addEventListener('click', () => {
+navLinks.classList.toggle('show');
+})
+</script>
+</body>
+</html>

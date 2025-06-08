@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Fashion Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <h1>My Fashion Blog</h1>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    <nav id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+<main>
+    <section class="starting">
+        <h2>Welcome to the World of Fashion</h2>
+        <p>Trendy looks, seasonal styles, and your daily fashion dose.</p>
+    </section>
+
+    <section class="featured-posts">
+        <h2>Featured Posts</h2>
+        <div class="post">
+            <img src="summerTrend.jpg" alt="Outfit 1" class="fade-in">
+            <h3>Top 5 Summer Trends in 2025</h3>
+            <p>Light fabrics, bold colors, and chic accessories to upgrade your style!</p>
+        </div>
+        <div class="post">
+            <img src="denim.jpg" alt="Outfit 2" class="fade-in">
+            <h3>How to Style Denim This Season</h3>
+            <p>From jeans to jackets, denim is making a bold comeback.</p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>@)@% My Fashion Blog</p>
+</footer>
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links')
+
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+    })
+</script>
+</body>
+</html>

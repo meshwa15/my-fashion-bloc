@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5 Fashion Essentials for Summer 2025 - My Fashion Blog</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&display=swap" rel="stylesheet"/>
+    <style>
+        main {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        img{
+            width: 100%;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+        }
+
+        a.back-link {
+           display: inline-block;
+            margin-top: 30px;
+            text-decoration: none;
+            background-color: #f4c2c2;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        a.back-link:hover {
+            background-color: #d49a9a;
+        }
+
+          .slideshow-container {
+              position: relative;
+              max-width: 600px;
+              margin: auto;
+          }
+
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 10px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 0 3px 3px 0;
+            background: rgba(0, 0, 0, 0.5);
+            user-select: none;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        .slide{
+            width: 600px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>My Fashion Blog</h1>
+</header>
+
+<main>
+    <h1>5 Fashion Essentials for Summer 2025</h1>
+    <div class="slideshow-container">
+        <img class="slide" src="summer1.jpg" alt="Look 1" style="display: block;">
+        <img class="slide" src="summer2.jpg" alt="Look 2" style="display: block;">
+        <img class="slide" src="summer3.jpg" alt="Look 3" style="display: block;">
+        <img class="slide" src="summer4.jpg" alt="Look 4" style="display: block;">
+        <img class="slide" src="summer5.jpg" alt="Look 5" style="display: block;">
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <p>Summer 2025 is all about staying cool and stylish! Here are five essentials you should add to your wardrobe:</p>
+    <ul>
+        <li><strong>Breathable fabrics:</strong> Linen and cotton will keep you comfortable in the heat.</li>
+        <li><strong>Pastel tones:</strong> Soft pinks, blues, and yellows add a fresh vibe.</li>
+        <li><strong>Comfortable cuts:</strong> Flowy dresses, wide-leg pants, and loose shirts for ease.</li>
+        <li><strong>Statement hats:</strong> Protect yourself from the sun with a chic hat.</li>
+        <li><strong>Minimal accessories:</strong> Keep it simple with delicate jewelry to complement your outfit.</li>
+    </ul>
+    <p>Stay confident and embrace the summer heat with these must-haves!</p>
+
+    <a href="blog.html" class="back-link">&#2190; Back to Blog</a>
+</main>
+
+<script>
+    let slideIndex = 0;
+    const slides = document.getElementsByClassName("slide");
+
+    function showSlide(n) {
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[n].style.display = "block";
+    }
+
+    function plusSlides(n) {
+        slideIndex += n;
+        if (slideIndex >= slides.length) slideIndex = 0;
+        if (slideIndex < 0) slideIndex = slides.length - 1;
+        showSlide(slideIndex);
+    }
+
+    function autoPlaySlides() {
+        slideIndex++;
+        if (slideIndex >= slides.length) slideIndex = 0;
+        showSlide(slideIndex);
+    }
+
+    showSlide(slideIndex);
+
+    setInterval(autoPlaySlides, 4000);
+</script>
+
+
+</body>
+</html>
